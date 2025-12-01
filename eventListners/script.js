@@ -16,9 +16,8 @@
 // let h1 = document.querySelector('h1')
 // h1.addEventListener("dblclick", function(){
 //     h1.style.color = 'yellow'
-    
-// })
 
+// })
 
 /* event ko hta rhe hain. */
 // let h1 = document.querySelector('h1')
@@ -27,7 +26,6 @@
 // }
 // h1.addEventListener("dblclick", dblClick)
 // h1.removeEventListener("dblclick", dblClick)
-
 
 /* "input" event tab fire hota hai jab user type kare, delete kare, copy-paste kare → basically value change ho */
 // let input = document.querySelector('input')
@@ -42,3 +40,23 @@
 //         console.log(details.data);
 //     }
 // })
+
+/* change event tab chalta hai jab apka koi input select ya textarea mein koi change hojaye */
+
+/* Jab bhi dropdown change hota hai → h3 instantly update ho jata hai. */
+// let sel = document.querySelector("select")
+// let h3 = document.querySelector("h3")
+// sel.addEventListener("change", function(details){
+//     h3.textContent = `Device Selected: ${details.target.value}`
+
+// })
+
+/* Space press karne pe "SPC" show karna hai aur baaki keys ka naam normal show karna hai, */
+let h1 = document.querySelector("h1");
+window.addEventListener("keydown", function (e) {
+  if (e.key === " ") {
+    h1.textContent = "SPC";
+  } else {
+    h1.textContent = e.key;
+  }
+});
