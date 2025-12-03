@@ -52,11 +52,87 @@
 // })
 
 /* Space press karne pe "SPC" show karna hai aur baaki keys ka naam normal show karna hai, */
-let h1 = document.querySelector("h1");
-window.addEventListener("keydown", function (e) {
-  if (e.key === " ") {
-    h1.textContent = "SPC";
-  } else {
-    h1.textContent = e.key;
-  }
+// let h1 = document.querySelector("h1");
+// window.addEventListener("keydown", function (e) {
+//   if (e.key === " ") {
+//     h1.textContent = "SPC";
+//   } else {
+//     h1.textContent = e.key;
+//   }
+// });
+
+/* Humne input type="file" ko hide kar diya hai
+aur uski jagah ek custom button bana diya —
+jo dabane pe file picker open hota hai
+aur phir selected file ka naam button pe show hota hai.  */
+// let btn = document.querySelector("#btn");
+// let fileinp = document.querySelector("#fileinp");
+
+// btn.addEventListener("click", function () {
+//   fileinp.click();
+// });
+
+// fileinp.addEventListener("change", (details) => {
+//   const file = details.target.files[0];
+
+//   if (file) {
+//     btn.textContent = file.name;
+//   }
+// });
+
+
+
+/* User form fill karta hai → name, age, email, profile pic URL.
+Form submit hota hi →
+tum JS se ek new card create karte ho jisme:
+Profile image
+Name
+Age
+Email  */
+
+let form = document.querySelector("form");
+let inputs = document.querySelectorAll("input");
+let mainDiv = document.querySelector("#main");
+
+form.addEventListener("submit", function (dets) {
+  dets.preventDefault();
+
+  console.log(
+    inputs[0].value,
+    inputs[1].value,
+    inputs[2].value,
+    inputs[3].value
+  );
+
+  let card = document.createElement("div");
+  card.classList.add("card");
+
+  let profile = document.createElement("div");
+  profile.classList.add("profile");
+
+  let img = document.createElement("img");
+  img.setAttribute(
+    "src",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjxgPaTk566096PFj8DYACe0KDAqLOLYCr_Q&s"
+  );
+
+  let h3 = document.createElement("h3");
+  h3.textContent = "Gora ghuraya";
+
+  let h5 = document.createElement("h5");
+  h5.textContent = "Ghoda";
+
+  let p = document.createElement("p");
+  p.textContent = "Ghoda is a very good janwar";
+
+  card.appendChild(profile);
+  profile.appendChild(img);
+  card.append(h3, h5, p);
+
+  img.src = inputs[3].value;
+  h3.textContent = inputs[0].value;
+  h5.textContent = inputs[1].value;
+  p.textContent = inputs[2].value;
+
+  mainDiv.append(card);
 });
