@@ -90,49 +90,71 @@ Name
 Age
 Email  */
 
-let form = document.querySelector("form");
-let inputs = document.querySelectorAll("input");
-let mainDiv = document.querySelector("#main");
+// let form = document.querySelector("form");
+// let inputs = document.querySelectorAll("input");
+// let mainDiv = document.querySelector("#main");
 
-form.addEventListener("submit", function (dets) {
-  dets.preventDefault();
+// form.addEventListener("submit", function (dets) {
+//   dets.preventDefault();
 
-  console.log(
-    inputs[0].value,
-    inputs[1].value,
-    inputs[2].value,
-    inputs[3].value
-  );
+//   console.log(
+//     inputs[0].value,
+//     inputs[1].value,
+//     inputs[2].value,
+//     inputs[3].value
+//   );
 
-  let card = document.createElement("div");
-  card.classList.add("card");
+//   let card = document.createElement("div");
+//   card.classList.add("card");
 
-  let profile = document.createElement("div");
-  profile.classList.add("profile");
+//   let profile = document.createElement("div");
+//   profile.classList.add("profile");
 
-  let img = document.createElement("img");
-  img.setAttribute(
-    "src",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjxgPaTk566096PFj8DYACe0KDAqLOLYCr_Q&s"
-  );
+//   let img = document.createElement("img");
+//   img.setAttribute(
+//     "src",
+//     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjxgPaTk566096PFj8DYACe0KDAqLOLYCr_Q&s"
+//   );
 
-  let h3 = document.createElement("h3");
-  h3.textContent = "Gora ghuraya";
+//   let h3 = document.createElement("h3");
+//   h3.textContent = "Gora ghuraya";
 
-  let h5 = document.createElement("h5");
-  h5.textContent = "Ghoda";
+//   let h5 = document.createElement("h5");
+//   h5.textContent = "Ghoda";
 
-  let p = document.createElement("p");
-  p.textContent = "Ghoda is a very good janwar";
+//   let p = document.createElement("p");
+//   p.textContent = "Ghoda is a very good janwar";
 
-  card.appendChild(profile);
-  profile.appendChild(img);
-  card.append(h3, h5, p);
+//   card.appendChild(profile);
+//   profile.appendChild(img);
+//   card.append(h3, h5, p);
 
-  img.src = inputs[3].value;
-  h3.textContent = inputs[0].value;
-  h5.textContent = inputs[1].value;
-  p.textContent = inputs[2].value;
+//   img.src = inputs[3].value;
+//   h3.textContent = inputs[0].value;
+//   h5.textContent = inputs[1].value;
+//   p.textContent = inputs[2].value;
 
-  mainDiv.append(card);
-});
+//   mainDiv.append(card);
+// });
+
+
+
+// Mouse Over event
+/* jesi div par mouse aye ga, to color yello ho jae ga, or jese div se hte ga mouse, to color red ho jae ga. */
+// let div = document.querySelector("#div")
+
+// div.addEventListener('mouseover', function(){
+//   div.style.backgroundColor = "yellow"
+// })
+
+// div.addEventListener("mouseout", function(){
+//   div.style.backgroundColor = "red"
+// })
+
+/* jese hi mouse move hoga wese hi div bhi usi ke sth move hoga. */
+// let div = document.querySelector('#div')
+
+// window.addEventListener("mousemove", function(dets){
+//   div.style.left = dets.clientX + "px"
+//   div.style.top = dets.clientY + "px"
+// })
