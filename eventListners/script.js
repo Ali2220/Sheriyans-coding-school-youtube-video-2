@@ -181,3 +181,17 @@ But target ki wajah se exact clicked li par styling apply hoti hai.  */
 // })
 
 /* Event Capturing  */
+// let a = document.querySelector('.a')
+// let b = document.querySelector('.b')
+// let c = document.querySelector('.c')
+// let btn = document.querySelector('button')
+
+// btn.addEventListener('click', function(){
+//     console.log('btn clicked');
+    
+// }, true)
+
+// c.addEventListener('click', function(){
+//     console.log('c clicked');
+    
+// }, true)
