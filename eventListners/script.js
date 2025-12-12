@@ -158,3 +158,26 @@ Email  */
 //   div.style.left = dets.clientX + "px"
 //   div.style.top = dets.clientY + "px"
 // })
+
+/* form submit krne par page reload na ho */
+// let form = document.querySelector('form')
+// form.addEventListener("submit", function(e){
+//     e.preventDefault()
+// })
+
+
+/* Event Bubbling...  */
+// jispe event aye agar aus pr listner nhi hua to humara event uske parent pr listener dhundega aur aisa krte krte upar ki taraf move karega.
+// Jab tum kisi inner element par click karte ho, event upar upar apne parents tak bubble (travel) hota jata hai
+
+/* Tum kisi bhi li par click karoge →
+Wo item cross (line-through) ho jayega.
+
+Tumne ul par event lagaya →
+But target ki wajah se exact clicked li par styling apply hoti hai.  */
+// let ul = document.querySelector('ul')
+// ul.addEventListener("click", function(dets){
+//     dets.target.classList.toggle('lt')    
+// })
+
+/* Event Capturing  */
