@@ -80,8 +80,6 @@ aur phir selected file ka naam button pe show hota hai.  */
 //   }
 // });
 
-
-
 /* User form fill karta hai → name, age, email, profile pic URL.
 Form submit hota hi →
 tum JS se ek new card create karte ho jisme:
@@ -137,8 +135,6 @@ Email  */
 //   mainDiv.append(card);
 // });
 
-
-
 // Mouse Over event
 /* jesi div par mouse aye ga, to color yello ho jae ga, or jese div se hte ga mouse, to color red ho jae ga. */
 // let div = document.querySelector("#div")
@@ -165,7 +161,6 @@ Email  */
 //     e.preventDefault()
 // })
 
-
 /* Event Bubbling...  */
 // jispe event aye agar aus pr listner nhi hua to humara event uske parent pr listener dhundega aur aisa krte krte upar ki taraf move karega.
 // Jab tum kisi inner element par click karte ho, event upar upar apne parents tak bubble (travel) hota jata hai
@@ -177,7 +172,7 @@ Tumne ul par event lagaya →
 But target ki wajah se exact clicked li par styling apply hoti hai.  */
 // let ul = document.querySelector('ul')
 // ul.addEventListener("click", function(dets){
-//     dets.target.classList.toggle('lt')    
+//     dets.target.classList.toggle('lt')
 // })
 
 /* Event Capturing  */
@@ -188,10 +183,19 @@ But target ki wajah se exact clicked li par styling apply hoti hai.  */
 
 // btn.addEventListener('click', function(){
 //     console.log('btn clicked');
-    
+
 // }, true)
 
 // c.addEventListener('click', function(){
 //     console.log('c clicked');
-    
+
 // }, true)
+
+/* Make Live character count  */
+
+let inp = document.querySelector("input");
+let span = document.querySelector("span");
+
+inp.addEventListener("input", function (dets) {
+  span.textContent = dets.target.value.length;
+});
