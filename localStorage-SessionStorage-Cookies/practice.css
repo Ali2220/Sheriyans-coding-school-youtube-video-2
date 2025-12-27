@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+/* Base layout */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Container */
+.container {
+  padding: 32px 40px;
+  border-radius: 16px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* 🌙 Dark theme */
+body.dark {
+  background: #0b0b0b;
+  color: #ffffff;
+}
+
+body.dark .container {
+  background: #151515;
+}
+
+body.dark button {
+  background: #ffffff;
+  color: #000;
+}
+
+/* ☀️ Light theme */
+body.light {
+  background: #f5f5f5;
+  color: #000;
+}
+
+body.light .container {
+  background: #ffffff;
+}
+
+body.light button {
+  background: #000;
+  color: #fff;
+}
