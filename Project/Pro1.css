@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif; /* Ya koi bhi clean font */
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Dark background as per image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Search Input Styling */
+#search {
+    padding: 15px 20px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px;
+}
+
+#search::placeholder {
+    color: #666;
+}
+
+#search:focus {
+    border-color: #555;
+    background-color: #222;
+}
+
+/* Container for Cards */
+.users {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card Styling */
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden; /* Image bahar na nikle */
+    background-color: #1a1a1a;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content (Name and Text) Overlay */
+.card .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: #fff;
+    z-index: 10;
+}
+
+.card .content h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card .content p {
+    font-size: 12px;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+/* Optional: Slight Blur effect inside content if needed (Glassmorphism twist) */
+/* .card .content {
+    backdrop-filter: blur(5px);
+} */
