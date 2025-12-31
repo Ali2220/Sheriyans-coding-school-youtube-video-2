@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Card & Call Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Pro2.css" />
+</head>
+
+<body>
+  <!-- Main Layout Container -->
+  <div class="main">
+
+    <!-- Left Interaction Panel (Floating Buttons) -->
+    <aside class="side-actions">
+      <div id="add-note" class="action-btn" title="Add New Card">
+        <i class="ri-add-line"></i>
+      </div>
+      <div id="upBtn" class="action-btn" title="Previous Card">
+        <i class="ri-arrow-up-line"></i>
+      </div>
+      <div id="downBtn" class="action-btn" title="Next Card">
+        <i class="ri-arrow-down-line"></i>
+      </div>
+    </aside>
+
+    <!-- Center Stage: Card Stack (Content rendered by JS) -->
+    <section class="stack-container" id="stack-container">
+      <!-- Cards will be injected here via JavaScript -->
+      <div class="empty-state">
+        <p>No cards available. Click + to add one.</p>
+      </div>
+    </section>
+
+    <!-- Modal: New Call Form -->
+    <div class="form-overlay" id="form-overlay">
+      <div class="form-container">
+        <h2>Create New Card</h2>
+
+        <form id="create-card-form">
+          <!-- Image URL Input -->
+          <div class="input-group">
+            <label for="img-url">Image URL</label>
+            <input id="img-url" required type="url" placeholder="https://images.unsplash.com/..." />
+          </div>
+
+          <!-- Full Name Input -->
+          <div class="input-group">
+            <label for="full-name">Full Name</label>
+            <input id="full-name" required type="text" placeholder="e.g. John Doe" />
+          </div>
+
+          <!-- Home Town Input -->
+          <div class="input-group">
+            <label for="hometown">Home Town</label>
+            <input id="hometown" required type="text" placeholder="e.g. New York" />
+          </div>
+
+          <!-- Purpose Input -->
+          <div class="input-group">
+            <label for="purpose">Purpose</label>
+            <input id="purpose" required type="text" placeholder="e.g. Weekly Meeting" />
+          </div>
+
+          <!-- Category Selection -->
+          <div class="category-group">
+            <label>Priority Category</label>
+            <div class="pills">
+              <label class="pill">
+                <input type="radio" name="category" value="Emergency" required />
+                <span>Emergency</span>
+              </label>
+
+              <label class="pill">
+                <input type="radio" name="category" value="Important" />
+                <span>Important</span>
+              </label>
+
+              <label class="pill">
+                <input type="radio" name="category" value="Urgent" />
+                <span>Urgent</span>
+              </label>
+
+              <label class="pill">
+                <input type="radio" name="category" value="No Rush" />
+                <span>No Rush</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Create Card</button>
+            <button type="button" class="btn-secondary" id="close-form">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="Pro2.js"></script>
+</body>
+
+</html>
